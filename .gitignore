@@ -1,3 +1,6 @@
 *.npz
 SMPL_*
 __pycache__
+build/
+install/
+log/
