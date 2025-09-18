@@ -1,7 +1,13 @@
 import numpy as np
 import open3d as o3d
-from .ros_utils import pointcloud2_to_xyz_array  # if you keep ROS helpers separate
+from utils import pointcloud2_to_xyz_array  # if you keep ROS helpers separate
 
+# ---- PointCloud2 helper ----
+def pointcloud2_to_xyz_array(cloud_msg):
+    return np.array(
+        [[p[0], p[1], p[2]] for p in pc2.read_points(cloud_msg, field_names=("x", "y", "z"), skip_nans=True)],
+        dtype=np.float32,
+    )
 
 def visualize_synced_data(synced_data):
     """

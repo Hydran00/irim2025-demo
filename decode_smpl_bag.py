@@ -12,7 +12,7 @@ from rosidl_runtime_py.utilities import get_message
 
 from scipy.spatial import procrustes
 from sensor_msgs_py import point_cloud2 as pc2
-
+from utils import pointcloud2_to_xyz_array
 from visualize import visualize_synced_data
 
 
@@ -107,12 +107,7 @@ def sync_messages(msgs_by_topic, slop_ns=5e7):
     return synced
 
 
-# ---- PointCloud2 helper ----
-def pointcloud2_to_xyz_array(cloud_msg):
-    return np.array(
-        [[p[0], p[1], p[2]] for p in pc2.read_points(cloud_msg, field_names=("x", "y", "z"), skip_nans=True)],
-        dtype=np.float32,
-    )
+
 
 
 # ---- Save NPZ ----
