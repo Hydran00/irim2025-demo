@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>smpl_traj_pkg</name>
+  <version>0.1.0</version>
+  <description>ROS2 package to compute trajectories over SMPL mesh vertices.</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>scipy</depend>
+  <depend>numpy</depend>
+  <depend>open3d</depend>
+  <depend>spatialmath-python</depend>
+  <depend>roboticstoolbox-python</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,6 +1,6 @@
 *.npz
-SMPL_*
-__pycache__
+SMPL_*/**
+__pycache__/
 build/
 install/
 log/
