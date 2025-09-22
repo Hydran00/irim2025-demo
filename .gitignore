@@ -1,8 +1,11 @@
 *.npz
-SMPL_*/**
+SMPL_1*/
+SMPL_rec*/
 __pycache__/
 build/
 install/
 log/
 clouds/
 clouds_fitting/
+clouds*/
+*_venv/

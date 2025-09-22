@@ -286,5 +286,5 @@ if __name__ == "__main__":
 
     if args.npz_path:
         save_synced_data_to_npz(synced_data, args.npz_path)
-    if args.cloud_folder:
-        save_pointclouds(synced_data, args.cloud_folder)
+    # if args.cloud_folder:
+    #     save_pointclouds(synced_data, args.cloud_folder)
